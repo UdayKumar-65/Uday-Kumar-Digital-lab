@@ -50,28 +50,18 @@
     from{box-shadow:0 0 10px #ff9800;}
     to{box-shadow:0 0 25px #ff5722;}
 
-           
-     <h2>Quiz Game</h2>
-<div id="quiz-container"></div> 
-        
-const quiz = [<script>
-const container = document.getElementById("quiz-container");
+           <h2>📝 General Knowledge Quiz</h2>
 
-quiz.forEach((q, index) => {
-    let html = `
-        <div style="border:1px solid #ccc;padding:10px;margin:10px;">
-            <h3>${index + 1}. ${q.question}</h3>
-    `;
+<div id="quiz-container"></div>
 
-    q.options.forEach(option => {
-        html += `<p>• ${option}</p>`;
-    });
+<button onclick="showScore()">Submit Quiz</button>
 
-    html += `</div>`;
+<p id="result"></p>
+       
+            
+const quiz = [</script>
+            
 
-    container.innerHTML += html;
-});
-</script> ]
 {
 question:"भारत की राजधानी क्या है?",
 options:["मुंबई","दिल्ली","कोलकाता","चेन्नई"],
@@ -169,8 +159,7 @@ answer:0
 },
 {
 question:"भारत का सबसे बड़ा राज्य क्षेत्रफल के अनुसार कौन सा है?",
-options:["उत्तर प्रदेश","राजस्थान","मध्य प्रदेश","गुजरात"],
-answer:1
+options:["उत्तर प्रदेश","राजस्थान","मध्य प्रदेश","गुजरात"],answer:1
 },
 {
 question:"भारत का सबसे अधिक जनसंख्या वाला राज्य कौन सा है?",
@@ -183,96 +172,7 @@ options:["1","2","3","4"],
 answer:1
 },
 {
-question:"लोकसभा के सदस्यों का कार्यकाल कितने वर्ष का होता है?",
-options:["4","5","6","7"],
-answer:1
-},
-{
-question:"भारत का राष्ट्रीय जलीय जीव कौन है?",
-options:["व्हेल","डॉल्फिन","शार्क","ऑक्टोपस"],
-answer:1
-},
-{
-question:"मोर भारत का कौन सा राष्ट्रीय प्रतीक है?",
-options:["राष्ट्रीय पशु","राष्ट्रीय पक्षी","राष्ट्रीय फूल","राष्ट्रीय वृक्ष"],
-answer:1
-}
-{
-question:"भारत की सबसे लंबी नदी कौन सी है?",
-options:["यमुना","गंगा","गोदावरी","नर्मदा"],
-answer:1
-},
-{
-question:"भारत का राष्ट्रीय गीत कौन सा है?",
-options:["जन गण मन","वंदे मातरम्","सारे जहाँ से अच्छा","ऐ मेरे वतन के लोगों"],
-answer:1
-},
-{
-question:"सौरमंडल का सबसे बड़ा ग्रह कौन है?",
-options:["पृथ्वी","मंगल","बृहस्पति","शनि"],
-answer:2
-},
-{
-question:"पृथ्वी को नीला ग्रह क्यों कहा जाता है?",
-options:["पहाड़ों के कारण","जल के कारण","बादलों के कारण","हवा के कारण"],
-answer:1
-},
-{
-question:"भारत की खोज किसने की थी?",
-options:["वास्को डी गामा","कोलंबस","मैगेलन","कुक"],
-answer:0
-},
-{
-question:"भारत का राष्ट्रीय ध्वज किसने डिजाइन किया?",
-options:["महात्मा गांधी","पिंगली वेंकैया","नेहरू","पटेल"],
-answer:1
-},
-{
-question:"विश्व का सबसे ऊँचा पर्वत कौन सा है?",
-options:["K2","कंचनजंगा","माउंट एवरेस्ट","नंदा देवी"],
-answer:2
-},
-{
-question:"किस ग्रह को लाल ग्रह कहा जाता है?",
-options:["शुक्र","मंगल","बुध","शनि"],
-answer:1
-},
-{
-question:"भारत का राष्ट्रीय कैलेंडर कौन सा है?",
-options:["विक्रम संवत","शक संवत","हिजरी","ग्रेगोरियन"],
-answer:1
-},
-{
-question:"भारत का पहला उपग्रह कौन सा था?",
-options:["भास्कर","आर्यभट्ट","रोहिणी","कल्पना"],
-answer:1
-},
-{
-question:"जल का रासायनिक सूत्र क्या है?",
-options:["CO2","H2O","O2","NaCl"],
-answer:1
-},
-{
-question:"मनुष्य के शरीर में कितनी हड्डियाँ होती हैं?",
-options:["206","208","210","212"],
-answer:0
-},
-{
-question:"भारत का सबसे बड़ा राज्य जनसंख्या के अनुसार कौन सा है?",
-options:["बिहार","महाराष्ट्र","उत्तर प्रदेश","गुजरात"],
-answer:2
-},
-{
-question:"भारत का सबसे छोटा राज्य कौन सा है?",
-options:["गोवा","सिक्किम","त्रिपुरा","मिजोरम"],
-answer:0
-},
-{
-question:"भारत की सबसे बड़ी झील कौन सी है?",
-options:["चिल्का","वुलर","सांभर","डल"],
-answer:1
-},
-{
+
 question:"भारत में कुल कितने राज्य हैं?",
 options:["26","27","28","29"],
 answer:2
@@ -297,14 +197,7 @@ question:"तिरंगे में अशोक चक्र का रं�
 options:["हरा","केसरिया","नीला","काला"],
 answer:2
 },
-{
-question:"भारत की पहली महिला प्रधानमंत्री कौन थीं?",
-options:["सरोजिनी नायडू","इंदिरा गांधी","प्रतिभा पाटिल","मीरा कुमार"],
-answer:1
-},
-{
-question:"भारत के प्रथम प्रधानमंत्री कौन थे?",
-options:["गांधी","नेहरू","पटेल","राजेन्द्र प्रसाद"],
+{ प्रसाद"],
 answer:1
 },
 {
@@ -416,7 +309,52 @@ answer:1
 question:"जय जवान जय किसान का नारा किसने दिया?",
 options:["गांधी","नेहरू","लाल बहादुर शास्त्री","पटेल"],
 answer:2
-},
+} ]<script>
+
+const quizContainer = document.getElementById("quiz-container");
+
+quiz.forEach((q, index) => {
+
+    let html = `
+        <div style="padding:15px;margin:15px 0;border:1px solid #ccc;border-radius:10px;">
+            <h3>${index + 1}. ${q.question}</h3>
+    `;
+
+    q.options.forEach((option, i) => {
+        html += `
+        <label>
+            <input type="radio" name="q${index}" value="${i}">
+            ${option}
+        </label>
+        <br>
+        `;
+    });
+
+    html += `</div>`;
+
+    quizContainer.innerHTML += html;
+});
+
+function showScore() {
+
+    let score = 0;
+
+    quiz.forEach((q, index) => {
+
+        const selected =
+        document.querySelector(`input[name="q${index}"]:checked`);
+
+        if (selected && Number(selected.value) === q.answer) {
+            score++;
+        }
+
+    });
+
+    document.getElementById("result").innerHTML =
+    "✅ Your Score: " + score + " / " + quiz.length;
+
+}
+
 {
 question:"भारत की पहली महिला राष्ट्रपति कौन थीं?",
 options:["इंदिरा गांधी","प्रतिभा पाटिल","मीरा कुमार","सुषमा स्वराज"],
