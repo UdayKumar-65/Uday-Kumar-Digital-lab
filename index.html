@@ -50,15 +50,28 @@
     from{box-shadow:0 0 10px #ff9800;}
     to{box-shadow:0 0 25px #ff5722;}
 
-           <style> 
-            .play ▶️ and win knowledge please try please click 👆
-            background ; yellow and red mix ;
-            color; white ;
-            text:align : center ;
-            padding:35px ;
-            border - radius : 25px ;
+           
+     <h2>Quiz Game</h2>
+<div id="quiz-container"></div> 
         
-const quiz = [
+const quiz = [<script>
+const container = document.getElementById("quiz-container");
+
+quiz.forEach((q, index) => {
+    let html = `
+        <div style="border:1px solid #ccc;padding:10px;margin:10px;">
+            <h3>${index + 1}. ${q.question}</h3>
+    `;
+
+    q.options.forEach(option => {
+        html += `<p>• ${option}</p>`;
+    });
+
+    html += `</div>`;
+
+    container.innerHTML += html;
+});
+</script> ]
 {
 question:"भारत की राजधानी क्या है?",
 options:["मुंबई","दिल्ली","कोलकाता","चेन्नई"],
